@@ -52,14 +52,14 @@ services:
   # Plugins
   # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
   # -- Remove unwanted plugins as needed
-  bluetooth:
-    build: ./plugins/bluetooth
-    restart: on-failure
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-    labels:
-      io.balena.features.dbus: 1
+  # bluetooth:
+  #   build: ./plugins/bluetooth
+  #   restart: on-failure
+  #   network_mode: host
+  #   cap_add:
+  #     - NET_ADMIN
+  #   labels:
+  #     io.balena.features.dbus: 1
 
   airplay:
     build: ./plugins/airplay
@@ -69,10 +69,10 @@ services:
     labels:
       io.balena.features.dbus: 1
 
-  spotify:
-    build: ./plugins/spotify
-    restart: on-failure
-    privileged: true
-    network_mode: host
-    volumes:
-      - spotifycache:/var/cache/raspotify
+  # spotify:
+  #   build: ./plugins/spotify
+  #   restart: on-failure
+  #   privileged: true
+  #   network_mode: host
+  #   volumes:
+  #     - spotifycache:/var/cache/raspotify
